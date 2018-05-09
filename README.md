@@ -1,6 +1,6 @@
 # ais-pwa
 
-> pwa version sor AIS
+> pwa version for AIS
 
 ## Build Setup
 
