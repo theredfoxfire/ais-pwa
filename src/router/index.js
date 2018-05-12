@@ -4,6 +4,7 @@ import 'vuetify/dist/vuetify.css';
 import Vuetify from 'vuetify';
 import Hello from '@/components/Hello';
 import Login from '@/components/Login';
+import Registration from '@/components/Registration';
 import store from '../store';
 
 Vue.use(Router);
@@ -26,7 +27,7 @@ const ifAuthenticated = (to, from, next) => {
 
 Vue.use(Vuetify, {
   theme: {
-    primary: '#607D8B',
+    primary: '#039BE5',
     secondary: '#78909C',
     accent: '#90A4AE',
     error: '#F4511E',
@@ -45,6 +46,12 @@ export default new Router({
       path: '/',
       name: 'Login',
       component: Login,
+      beforeEnter: ifNotAuthenticated,
+    },
+    {
+      path: '/registration',
+      name: 'Registration',
+      component: Registration,
       beforeEnter: ifNotAuthenticated,
     },
     {

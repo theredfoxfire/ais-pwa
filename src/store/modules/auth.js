@@ -40,7 +40,6 @@ const actions = {
       },
     )
       .then(({ data }) => {
-        console.log(data);
         localStorage.setItem('user-token', data);
         commit(AUTH_SUCCESS, { token: data });
         dispatch(FINISH_REQUEST);

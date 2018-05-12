@@ -5,6 +5,7 @@
        clipped
        app
        v-model="naviBar"
+       v-if="isAuthenticated"
       >
       <v-list class="pa-1">
         <v-list-tile avatar>
