@@ -3,13 +3,23 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
+import store from './store';
+import helperList from './helper';
 
 Vue.config.productionTip = false;
+Vue.mixin({
+  methods: {
+    helper() {
+      return helperList;
+    },
+  },
+});
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App },
 });
